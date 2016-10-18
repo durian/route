@@ -1,0 +1,12 @@
+#VisitsCity,Torekov
+#VisitsCity,bostad
+#MinTime,240
+#VisitsCity,b
+#VisitsCity,c
+#VisitsCity,d
+#VisitsCity,e
+#VisitsCity,f
+#VisitsCity,g
+#VisitsCity,h
+#VisitsCity,i
+#VisitsCity,j

@@ -1,0 +1,47 @@
+<project name="route" default="compile" basedir=".">
+
+<target name="init" depends="prepare">
+  <property name="name" value="route" />
+<!--
+  <property name="annex.lib" value="./lib" />
+  <property name="extern.lib" value="../lib" />
+-->
+  <property name="src"  value="./org/durian/route/" />
+  <property name="dest" value="./dest/" />
+  <property name="build" value="./build" />
+
+  <tstamp />
+  
+  <delete includeEmptyDirs="true" failonerror="false">
+    <fileset dir="${build}"/>
+  </delete>
+  
+  <mkdir dir="${build}"/>
+  <mkdir dir="${dest}"/>
+  <mkdir dir="${src}"/>
+  
+</target>
+
+<target name="prepare">
+  <echo message="Java version: ${ant.java.version}" />
+</target>
+
+<path id="route-classpath">
+  <fileset dir=".">
+      <include name="*.jar" />
+  </fileset>  
+</path>
+
+<target name="compile" depends="init" description="make...">
+  <echo message="Compiling..." />
+  <javac srcdir="${src}" destdir="${build}">
+    <classpath refid="route-classpath" />
+  </javac>
+</target>
+
+
+<target name="jar" depends="compile" description="generate the jar" >
+   <jar destfile="./route.jar" basedir="build" excludes="*~" />
+</target>
+
+</project>

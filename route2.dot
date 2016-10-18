@@ -1,0 +1,18 @@
+digraph G {
+mumbai -> margao
+mumbai -> margao
+mumbai -> mangalore
+#
+margao -> mangalore
+margao -> mangalore
+#
+mangalore -> madikeri
+#
+madikeri -> virajpet
+#
+virajpet -> kannur
+virajpet -> bangalore
+#
+mysore -> bangalore
+mysore -> mangalore
+}

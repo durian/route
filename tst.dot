@@ -1,0 +1,26 @@
+graph G {
+# neato -Tpng tst.dot -o foo.png
+a -- b [label="2"];
+a -- c [label="3"];
+a -- e [label="8"];
+c -- d [label="5"];
+c -- h [label="4"];
+d -- e [label="2"];
+d -- f [label="1"];
+d -- j [label="6"];
+e -- g [label="2"];
+f -- g [label="6"];
+g -- j [label="4"];
+h -- i [label="4"];
+i -- j [label="4"];
+i -- o [label="10"];
+j -- k [label="1"];
+j -- n [label="10"];
+k -- l [label="1"];
+l -- m [label="1"];
+m -- n [label="1"];
+o -- p [label="1"];
+p -- q [label="2"];
+q -- r [label="2"];
+r -- b [label="20"];
+}

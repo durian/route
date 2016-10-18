@@ -1,0 +1,21 @@
+Göteborg
+Margretetorp
+Ängelholm
+Hunseröd
+Helsinborg
+Nijmegen
+Köbenhavn
+#
+# c1, c2, means, distance(km), cost, time(mins)
+# BY_CAR   =  0;
+# BY_TRAIN =  1;
+# BY_PLANE =  2;
+# BY_FERRY =  4;
+# BY_CYCLE =  8;
+# BY_FOOT  = 16;
+#
+Göteborg, Ängelholm, 1, 190, 450, 120
+Ängelholm, Helsinborg, 1, 30, 100, 20
+Ängelholm, Margretetorp, 0, 10, 10, 15
+Ängelholm, Hunseröd, 0, 60, 100, 45
+Nijmegen,Köbenhavn, 700, 0, 100, 360

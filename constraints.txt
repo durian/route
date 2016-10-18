@@ -1,0 +1,10 @@
+#NoDoubleCity
+NoDirectReturn
+MaximumSize,12
+#MaxCost,2000
+#MaxTime,480
+#MaxConnectionTime,55
+#MinTime,120
+#MinCityScore,0
+#ContinueSameMeans
+#PrintConstraint

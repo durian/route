@@ -1,0 +1,48 @@
+package org.durian.route;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Reader {
+
+	public Reader() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/*
+	 * Fill this holiday with data. Also a socket version?
+	 * CityReader and ConnectionReader?
+	 */
+	public void read( String fname, Holiday h ) {
+		try {
+			BufferedReader in = new BufferedReader( new FileReader(fname) );
+			String str;
+			while ((str = in.readLine()) != null) {
+				//process(str);
+				System.out.println( str );
+				String parts[] = str.split(",");
+				if ( parts.length < 3 ) {
+					// City
+					System.out.println( "City" );
+					City c = new City( parts[0] );
+					h.addCity( c );
+				} else if ( parts.length == 6 ) {
+					System.out.println( "Connection" );
+					City c_from = h.getCityByName( parts[0] );
+					City c_to   = h.getCityByName( parts[1] );
+					int means = new Integer( parts[2].replaceAll(" ", "") ).intValue();
+					int dist  = new Integer( parts[3].replaceAll(" ", "") ).intValue();
+					int cost  = new Integer( parts[4].replaceAll(" ", "") ).intValue();
+					int time  = new Integer( parts[5].replaceAll(" ", "") ).intValue();
+					Connection con = new Connection( c_from, c_to, means, dist, cost, time );
+					h.addConnection( con );
+				}
+			}
+			in.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

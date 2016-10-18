@@ -1,0 +1,1 @@
+R[mumbai-bangalore]:      0 SEK, 30:00, 1642 km. mumbai->BY_TRAIN->margao->BY_TRAIN->mangalore->BY_TRAIN->mysore->BY_TRAIN->bangalore
